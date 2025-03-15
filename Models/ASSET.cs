@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.EntityFrameworkCore;
-using Sofia.API.Models;
 
 namespace Sofia.API.Models;
 
@@ -17,7 +13,7 @@ public partial class ASSET
 
     public string? company { get; set; }
 
+    public byte[]? image { get; set; }
+
     public virtual ICollection<OPERATION> OPERATIONs { get; set; } = new List<OPERATION>();
 }
-
-

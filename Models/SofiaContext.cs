@@ -46,6 +46,7 @@ public partial class SofiaContext : DbContext
             entity.Property(e => e.asset_name).HasMaxLength(50);
             entity.Property(e => e.company).HasMaxLength(200);
             entity.Property(e => e.symbol).HasMaxLength(10);
+            entity.Property(e => e.image).HasColumnType("image");
         });
 
         modelBuilder.Entity<BROKER>(entity =>
